@@ -240,7 +240,7 @@
                     <div class="col-md-4"><a href="#"><img
                                 src="https://bizweb.dktcdn.net/thumb/medium/100/429/689/products/apple-iphone-12-mini-2-0340d148-dd79-40b3-b8ad-95ed589c7b5a.png?v=1623564588267"
                                 alt=""></a></div>
-                    <div class="col-md-8">Tiêu đề ở đâyy
+                    <div class="col-md-8">Tiêu đề ở đây
                         <br><b class="text-danger fs-6">45.000đ</b>
                     </div>
                 </div>
