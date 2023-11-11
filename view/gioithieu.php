@@ -15,6 +15,7 @@
                 <h4>
                     Chào mừng bạn đến với cửa hàng mỹ phẩm của chúng tôi! Chúng tôi là điểm đến lý tưởng cho những người yêu thế giới làm đẹp và muốn tỏa sáng mọi lúc, mọi nơi. Với một sự lựa chọn đa dạng các sản phẩm mỹ phẩm chất lượng, cửa hàng của chúng tôi cam kết đem đến cho bạn trải nghiệm mua sắm độc đáo và đáng nhớ.
                 </h3>
+                <h1>hello</h1>
                 <div class="hrne container mt-5">
                     <style>
                         .hrne {
