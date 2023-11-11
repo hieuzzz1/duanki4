@@ -127,11 +127,13 @@
                                     </ul>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-white px-4" href="index.php?act=tintuc">Bài viết</a>
+                                    <a class="nav-link text-white px-4" href="index.php?act=tintuc">Tin tức</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-white px-4" href="#">Câu hỏi thường
-                                        gặp</a>
+                                    <a class="nav-link text-white px-4" href="index.php?act=chinhsach">Chính sách</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white px-4" href="index.php?act=lienhe">Liên hệ</a>
                                 </li>
                             </ul>
                             <style>

@@ -14,11 +14,17 @@
             case 'tintuc':
                 include "./view/tintuc.php";
                 break;
+            case 'chinhsach':
+                include "./view/chinhsach.php";
+                break;
+            case 'lienhe':
+                include "./view/lienhe.php";
+                break;
 
             
             
             default:
-            include "./view/home.php";
+                include "./view/home.php";
                 break;
         }
     }else {
