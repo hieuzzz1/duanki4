@@ -59,7 +59,13 @@
                 </div>
             </div>
         </div>
+        
     </div>
+    <div class="col-3 mb-3">
+            <?php 
+                include "boxright.php";
+            ?>
+        </div>
 <style>
     img.card-img-top{
         left: 200px;

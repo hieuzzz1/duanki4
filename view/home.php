@@ -90,6 +90,10 @@
                     height: 1px;
                     border: 1px solid #d51b2e;
                 }
+
+                body {
+                    background-color: #F3F3F6;
+                }
             </style>
         </div>
         <!-- slideshow -->
@@ -159,14 +163,12 @@
                             margin: 0 auto;
                             max-width: 70px;
                             border-radius: 20%;
-                            background-color: #f8dddd;
+                            background-color: #ffffff;
                         }
 
                         .anhcrs .item p {
                             text-align: center;
                         }
-
-
                     </style>
 
                 </div>
@@ -197,7 +199,7 @@
                                 <div class="card" style="width: 18rem;">
                                     <div class="card-body">
                                         <div class="anhsppp">
-                                            <a href="indextk.php?act=spchitiet"><img
+                                            <a href="index.php?act=spchitiet"><img
                                                     src="https://png.pngtree.com/png-clipart/20200206/ourlarge/pngtree-pink-fresh-cosmetics-set-elements-png-image_2132437.jpg"
                                                     class="card-img-top" alt="...">
                                                 <p class="card-title">'.$name.'</p>
@@ -390,11 +392,75 @@
                 <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab"
                     tabindex="0">
                     <div class="row mx-5">
+                        <?php
+                            foreach ($spnew as $sp) {
+                                extract($sp);
+                                echo '<div class="col-md-3">
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <div class="anhsppp">
+                                            <a href="index.php?act=spchitiet"><img
+                                                    src="https://png.pngtree.com/png-clipart/20200206/ourlarge/pngtree-pink-fresh-cosmetics-set-elements-png-image_2132437.jpg"
+                                                    class="card-img-top" alt="...">
+                                                <p class="card-title">'.$name.'</p>
+                                            </a>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-7">
+                                                <div class="giasp mt-4">
+                                                '.$giasp.'$
+                                                </div>
+                                                <span class="giasale text-decoration-line-through">200.000đ</span>
+                                            </div>
+                                            <div class="col-md-2 mt-5 carrt yttt">
+                                                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                            </div>
+                                            <div class="col-md-2 mt-5 carrt">
+                                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>';
+                            }
+                        ?>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab"
                     tabindex="0">
                     <div class="row mx-5">
+                        <?php
+                            foreach ($spnew as $sp) {
+                                extract($sp);
+                                echo '<div class="col-md-3">
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <div class="anhsppp">
+                                            <a href="index.php?act=spchitiet"><img
+                                                    src="https://png.pngtree.com/png-clipart/20200206/ourlarge/pngtree-pink-fresh-cosmetics-set-elements-png-image_2132437.jpg"
+                                                    class="card-img-top" alt="...">
+                                                <p class="card-title">'.$name.'</p>
+                                            </a>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-7">
+                                                <div class="giasp mt-4">
+                                                '.$giasp.'$
+                                                </div>
+                                                <span class="giasale text-decoration-line-through">200.000đ</span>
+                                            </div>
+                                            <div class="col-md-2 mt-5 carrt yttt">
+                                                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                            </div>
+                                            <div class="col-md-2 mt-5 carrt">
+                                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>';
+                            }
+                        ?>
                     </div>
                 </div>
             </div>
@@ -473,6 +539,13 @@
         </div>
     </div>
     <style>
+        #nav-contact,
+        #nav-profile,
+        #nav-tabContent {
+            background-color: #fff;
+            border: none;
+        }
+
         .baiposs {
             text-decoration: none;
             color: #000000;
@@ -493,10 +566,6 @@
             color: #000000 !important;
         }
 
-        #nav-tabContent {
-            border: 1px solid #b7b7b7;
-
-        }
 
         .product-content img {
             max-width: 170px;
@@ -521,7 +590,6 @@
             margin-top: 20px;
             margin-bottom: 20px;
             max-width: 230px;
-            border: 1px solid #cecece;
             background-color: #fff8f9;
         }
 
@@ -598,6 +666,3 @@
 
 </section>
 <!-- endmaincontent -->
-
-
-

@@ -135,6 +135,11 @@ Chúng tôi luôn đặt sự hài lòng và niềm tin của khách hàng lên 
             </div>
         </div>
     </div>
+    <div class="col-3 mb-3">
+            <?php 
+                include "boxright.php";
+            ?>
+    </div>
 </div>
 <style>
     p.card{
