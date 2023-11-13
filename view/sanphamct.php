@@ -1,7 +1,16 @@
 <div class="container">
-    <div class="col-md-9 mt-3 mb-4">
-        <a href="index.php" class="text-decoration-none text-dark">Trang chủ</a> / <span class="text-danger">Sản phẩm
+    <div class="col-md-9 mt-3 mb-4 iconcsss">
+        <a href="index.php" class="text-decoration-none text-dark">Trang chủ</a> <i
+            class="fa-solid fa-chevron-right"></i> <span class="text-danger">Sản phẩm
             chi tiết</span>
+        <style>
+            .iconcsss i {
+                font-size: 14px;
+                color: #989898;
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+        </style>
     </div>
     <div class="row mb-5 boxctiet1">
         <div class="col-md-5">

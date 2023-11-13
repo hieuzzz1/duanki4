@@ -7,10 +7,10 @@
             </div>
         <style>
             .dhmenu {
-                margin-left:100px;
+                margin-left: 20px;
             }
             body {
-                    background-color: #F3F3F6;
+                    background-color: #e6e6f1;
                 }
         </style>
 </div>
@@ -92,7 +92,7 @@
 
     .container0 {
         margin: auto;
-        background-color: rgb(240, 204, 204);
+        background-color: #fff;
         margin-bottom: 0.5rem;
         margin-top: 0.5rem;
         border-radius: 3px;

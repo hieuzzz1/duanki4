@@ -92,7 +92,8 @@
                 }
 
                 body {
-                    background-color: #F3F3F6;
+                    background-color: #e6e6f1;
+
                 }
             </style>
         </div>
@@ -176,6 +177,215 @@
         </div>
         <!-- end-slideshow -->
 
+
+        <!-- giỏ hàng - home -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title fw-bold" id="offcanvasRightLabel">GIỎ HÀNG</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="row img mb-5">
+                    <div class="col-3">
+                        <form action="" method="post">
+                            <a href="#">
+                                <img src="https://bizweb.dktcdn.net/thumb/compact/100/429/689/products/apple-iphone-12-mini-3-f12f8dba-9d92-4173-8b32-cc2ce74df353.png"
+                                    alt="sp">
+                            </a>
+                    </div>
+                    <div class="col-6 sphome-ct">
+                        <a href="#">
+                            <div class="tensp">Kem chống nắng</div>
+                        </a>
+                        <div class="quantity">Số lượng</div>
+                        <input type="number">
+
+                    </div>
+                    <div class="col-3 xoa-gia">
+                        <input type="submit" value="Xóa">
+                        <div class="price-home mt-4">
+                            300.000<span>₫</span>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+                <div class="row img mb-5">
+                    <div class="col-3">
+                        <form action="" method="post">
+                            <a href="#">
+                                <img src="https://bizweb.dktcdn.net/thumb/compact/100/429/689/products/apple-iphone-12-mini-3-f12f8dba-9d92-4173-8b32-cc2ce74df353.png"
+                                    alt="sp">
+                            </a>
+                    </div>
+                    <div class="col-6 sphome-ct">
+                        <a href="#">
+                            <div class="tensp">Kem chống nắng</div>
+                        </a>
+                        <div class="quantity">Số lượng</div>
+                        <input type="number">
+
+                    </div>
+                    <div class="col-3 xoa-gia">
+                        <input type="submit" value="Xóa">
+                        <div class="price-home mt-4">
+                            300.000<span>₫</span>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+                <div class="row img mb-5">
+                    <div class="col-3">
+                        <form action="" method="post">
+                            <a href="#">
+                                <img src="https://bizweb.dktcdn.net/thumb/compact/100/429/689/products/apple-iphone-12-mini-3-f12f8dba-9d92-4173-8b32-cc2ce74df353.png"
+                                    alt="sp">
+                            </a>
+                    </div>
+                    <div class="col-6 sphome-ct">
+                        <a href="#">
+                            <div class="tensp">Kem chống nắng</div>
+                        </a>
+                        <div class="quantity">Số lượng</div>
+                        <input type="number">
+
+                    </div>
+                    <div class="col-3 xoa-gia">
+                        <input type="submit" value="Xóa">
+                        <div class="price-home mt-4">
+                            300.000<span>₫</span>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+                <div class="row img mb-5">
+                    <div class="col-3">
+                        <form action="" method="post">
+                            <a href="#">
+                                <img src="https://bizweb.dktcdn.net/thumb/compact/100/429/689/products/apple-iphone-12-mini-3-f12f8dba-9d92-4173-8b32-cc2ce74df353.png"
+                                    alt="sp">
+                            </a>
+                    </div>
+                    <div class="col-6 sphome-ct">
+                        <a href="#">
+                            <div class="tensp">Kem chống nắng</div>
+                        </a>
+                        <div class="quantity">Số lượng</div>
+                        <input type="number">
+
+                    </div>
+                    <div class="col-3 xoa-gia">
+                        <input type="submit" value="Xóa">
+                        <div class="price-home mt-4">
+                            300.000<span>₫</span>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+            <div class="dathang-home">
+                <div class="row mb-3">
+                    <div class="col-6">Tổng tiền:</div>
+                    <div class="col-6">
+                        <div class="giasp-home-dathang">
+                            300.000<span>₫</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <div class="col">
+                        <input type="submit" value="Đặt Hàng">
+                    </div>
+                </div>
+
+            </div>
+
+            <style>
+                .dathang-home {
+                    height: 200px;
+                    padding: 20px;
+                }
+
+                .dathang-home input {
+                    width: 350px;
+                    height: 60px;
+                    background-color: #b85050;
+                    color: #fff;
+                    border-radius: 4px;
+                    border: none;
+                    font-size: 18px;
+                }
+
+                .dathang-home input:hover {
+                    border: 1px solid #b85050;
+                    background-color: #ffffff;
+                    color: #b85050;
+                }
+
+                .img {
+                    box-sizing: border-box;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                }
+
+                #offcanvasRight {
+                    max-width: 400px;
+                }
+
+                .xoa-gia {
+                    margin-left: -15px;
+                }
+
+                .xoa-gia input {
+                    font-size: 14px;
+                    border: 0.3px solid #ccc;
+                    margin-left: 10px;
+                    margin-top: 5px;
+                    color: #fff;
+                    background-color: #b85050;
+                }
+
+                .price-home {
+                    font-size: 13px;
+                    color: red;
+                }
+
+                .giasp-home-dathang {
+                    color: red;
+                    font-size: 18px;
+                    margin-left: 87px;
+                }
+
+                .quantity {
+                    font-size: 13px;
+                }
+
+                .sphome-ct .tensp {
+                    margin-top: 4px;
+                    margin-bottom: 10px;
+                    font-size: 14px;
+                }
+
+                .sphome-ct input {
+                    max-width: 40px;
+                    height: 20px;
+                    font-size: 14px;
+                }
+
+                .img img {
+                    max-width: 80px;
+                }
+
+                .img a {
+                    text-decoration: none;
+                    color: black;
+                }
+
+                .img:hover a {
+                    color: rgb(216, 113, 113);
+                }
+            </style>
+        </div>
+
+        <!-- end giỏ hàng home -->
         <div class="product-content">
             <nav>
                 <div class="nav nav-tabs mt-4" id="nav-tab" role="tablist">
@@ -207,13 +417,15 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-md-7">
+                                                
                                                 <div class="giasp mt-4">
-                                                '.$giasp.'$
+                                                '.$giasp.'<span>₫</span>
+                                                
                                                 </div>
                                                 <span class="giasale text-decoration-line-through">200.000đ</span>
                                             </div>
                                             <div class="col-md-2 mt-5 carrt yttt">
-                                                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                                <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fa-solid fa-cart-shopping"></i></a>
                                             </div>
                                             <div class="col-md-2 mt-5 carrt">
                                                 <a href="#"><i class="fa-regular fa-heart"></i></a>
@@ -251,141 +463,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="col-md-3">
-                            <div class="card" style="width: 18rem;">
-                                <div class="card-body">
-                                    <div class="anhsppp">
-                                        <a href="#"><img class="imggg"
-                                                src="https://png.pngtree.com/element_origin_min_pic/17/08/12/834761ada371502916968290765a8059.jpg"
-                                                class="card-img-top" alt="...">
-                                            <p class="card-title">Nước tẩy trang</p>
-                                        </a>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-7">
-                                            <div class="giasp mt-4">
-                                                100.000đ
-                                            </div>
-                                            <span class="giasale text-decoration-line-through">200.000đ</span>
-                                        </div>
-                                        <div class="col-md-2 mt-5 carrt yttt">
-                                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-                                        </div>
-                                        <div class="col-md-2 mt-5 carrt">
-                                            <a href="#"><i class="fa-regular fa-heart"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="card" style="width: 18rem;">
-                                <div class="card-body">
-                                    <div class="anhsppp">
-                                        <a href="#"><img class="imggg"
-                                                src="https://png.pngtree.com/element_origin_min_pic/17/08/13/7d6b28465113fefd1a263f392aa41666.jpg"
-                                                class="card-img-top" alt="...">
-                                            <p class="card-title">Nước tẩy trang</p>
-                                        </a>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-7">
-                                            <div class="giasp mt-4">
-                                                100.000đ
-                                            </div>
-                                            <span class="giasale text-decoration-line-through">200.000đ</span>
-                                        </div>
-                                        <div class="col-md-2 mt-5 carrt yttt">
-                                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-                                        </div>
-                                        <div class="col-md-2 mt-5 carrt">
-                                            <a href="#"><i class="fa-regular fa-heart"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="card" style="width: 18rem;">
-                                <div class="card-body">
-                                    <div class="anhsppp">
-                                        <a href="#"><img class="imggg"
-                                                src="https://studiovietnam.com/wp-content/uploads/2022/10/phong-nen-chup-anh-my-pham-02.jpg"
-                                                class="card-img-top" alt="...">
-                                            <p class="card-title">Nước tẩy trang</p>
-                                        </a>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-7">
-                                            <div class="giasp mt-4">
-                                                100.000đ
-                                            </div>
-                                            <span class="giasale text-decoration-line-through">200.000đ</span>
-                                        </div>
-                                        <div class="col-md-2 mt-5 carrt yttt">
-                                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-                                        </div>
-                                        <div class="col-md-2 mt-5 carrt">
-                                            <a href="#"><i class="fa-regular fa-heart"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="card" style="width: 18rem;">
-                                <div class="card-body">
-                                    <div class="anhsppp">
-                                        <a href="#"><img class="imggg"
-                                                src="https://hthaostudio.com/wp-content/uploads/2022/10/Anh-my-pham-3.jpg"
-                                                class="card-img-top" alt="...">
-                                            <p class="card-title">Nước tẩy trang</p>
-                                        </a>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-7">
-                                            <div class="giasp mt-4">
-                                                100.000đ
-                                            </div>
-                                            <span class="giasale text-decoration-line-through">200.000đ</span>
-                                        </div>
-                                        <div class="col-md-2 mt-5 carrt yttt">
-                                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-                                        </div>
-                                        <div class="col-md-2 mt-5 carrt">
-                                            <a href="#"><i class="fa-regular fa-heart"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="card" style="width: 18rem;">
-                                <div class="card-body">
-                                    <div class="anhsppp">
-                                        <a href="#"><img class="imggg"
-                                                src="https://hanacosvietnam.com/wp-content/uploads/2022/03/serum-sua-scaled-e1646282130394-1024x637.jpg"
-                                                class="card-img-top" alt="...">
-                                            <p class="card-title">Nước tẩy trang</p>
-                                        </a>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-7">
-                                            <div class="giasp mt-4">
-                                                100.000đ
-                                            </div>
-                                            <span class="giasale text-decoration-line-through">200.000đ</span>
-                                        </div>
-                                        <div class="col-md-2 mt-5 carrt yttt">
-                                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-                                        </div>
-                                        <div class="col-md-2 mt-5 carrt">
-                                            <a href="#"><i class="fa-regular fa-heart"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
 
                     </div>
                 </div>
@@ -645,6 +722,7 @@
             font-size: 20px;
             color: #d6d6d6;
         }
+
 
         .giasp {
             font-weight: 500;

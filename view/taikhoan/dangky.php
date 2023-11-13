@@ -1,19 +1,20 @@
 <div class="container">
     <div class="dieuhuong mb-4">
-    <div class="dhmenu mb-4">
+        <div class="dhmenu mb-4">
             <div class="col-md-9 mt-3">
                 <a href="index.php" class="text-decoration-none text-dark">Trang chủ</a> / <span
                     class="text-danger">Đăng ký</span>
             </div>
-        <style>
-            .dhmenu {
-                margin-left:100px;
-            }
-            body {
+            <style>
+                .dhmenu {
+                    margin-left: 20px;
+                }
+
+                body {
                     background-color: #F3F3F6;
                 }
-        </style>
-    </div>
+            </style>
+        </div>
         <div class="row">
             <?php
                 if(isset($thongbao) && ($thongbao !="")){
@@ -94,7 +95,7 @@
 
     .container0 {
         margin: auto;
-        background-color: rgb(240, 204, 204);
+        background-color: rgb(255, 255, 255);
         margin-bottom: 0.5rem;
         margin-top: 0.5rem;
         border-radius: 3px;

@@ -1,10 +1,22 @@
 <div class="container">
-    <div class="row">
+    <div class="row mb-5">
         <?php
             if(isset($thongbao) && ($thongbao!="")){
                 echo $thongbao;
             }
             ?>
+        <div class="col-md-9 mt-3 mb-1 iconcsss">
+            <a href="index.php" class="text-decoration-none text-dark">Trang chủ</a> <i
+                class="fa-solid fa-chevron-right"></i> <span class="text-danger">Cập nhật tài khoản</span>
+            <style>
+                .iconcsss i {
+                    font-size: 14px;
+                    color: #989898;
+                    margin-left: 5px;
+                    margin-right: 5px;
+                }
+            </style>
+        </div>
         <h5 class="tt">Cập nhật tài khoản</h5>
         <div class="col-md-9 container1">
             <?php 
@@ -37,7 +49,7 @@
                     <label for="validationDefault01" class="form-label">Số điện thoại</label>
                     <input type="text" name='tel' class="form-control" id="validationDefault01" value="<?=$tel?>">
                 </div>
-                <div class="col-12">
+                <div class="col-12 mb-5">
                     <input type="hidden" name="id" value="<?=$id?>">
                     <input class="btn btn-primary" type="submit" name="capnhat" value="Cập nhật">
 
@@ -92,6 +104,10 @@
     }
 </style>
 <style>
+    body {
+        background-color: #e6e6f1;
+    }
+
     ::placeholder {
         font-weight: 100;
 
@@ -104,13 +120,14 @@
 
     .tt {
         padding: 20px 30px;
-        background-color: #DC3545;
-        color: #ffffff;
-
+        background-color: #ffffff;
+        color: #ccc;
+        margin-top: 20px;
+        width: 1307px;
     }
 
     .container1 {
-        background-color: #f8f4f4;
+        background-color: #fff;
         margin-bottom: 0.5rem;
         border-radius: 3px;
         display: flex;

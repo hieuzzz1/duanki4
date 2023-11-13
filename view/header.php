@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./assets/owlcarousel/assets/owl.theme.default.min.css">
     <script src="./assets/vendors/jquery.min.js"></script>
     <script src="./assets/owlcarousel/owl.carousel.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/boosted@5.2.3/dist/js/boosted.bundle.min.js" integrity="sha384-MANW37RG4MpFWPMCcNZBnvSobOkBpIGlbBkEzTtD4FbbOzJXbW8TddND1ak2lfsB" crossorigin="anonymous"></script> -->
 </head>
 
 <body>
@@ -114,7 +115,7 @@
                                     <span class="visually-hidden">New alerts</span>
                                 </span>
                             </a></div>
-                        <div class="col"><a href="#" class="position-relative ms-2">
+                        <div class="col"><a href="index.php?act=spyeuthich" class="position-relative ms-2">
                                 <span><i class="fa-solid fa-heart text-dark fs-4"></i></span>
                                 <span
                                     class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">

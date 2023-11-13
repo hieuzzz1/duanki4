@@ -1,17 +1,28 @@
 <div class="containersp">
     <div class="dieuhuong mb-4">
         <div class="dhmenu mb-3">
-            <div class="col-md-9 mt-3">
-                <a href="index.php" class="text-decoration-none text-dark">Trang chủ</a> / <span class="text-danger">Tất
-                    cả sản phẩm</span>
-            </div>
+        <div class="col-md-9 mt-3 mb-4 iconcsss">
+        <a href="index.php" class="text-decoration-none text-dark">Trang chủ</a> <i
+            class="fa-solid fa-chevron-right"></i> <span class="text-danger">Tất cả sản phẩm</span>
+        <style>
+            .iconcsss i {
+                font-size: 14px;
+                color: #989898;
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+            .iconcsss {
+                margin-left: -23px;
+            }
+        </style>
+    </div>
             <style>
                 .dhmenu {
-                    margin-left: 80px;
+                    margin-left: 150px;
                 }
 
                 body {
-                    background-color: #F3F3F6;
+                    background-color: #e6e6f1;
                 }
             </style>
         </div>
@@ -37,7 +48,7 @@
                                         <div class="row">
                                             <div class="col-md-7">
                                                 <div class="giasp mt-4">
-                                                '.$giasp.'$
+                                                '.$giasp.'<span>₫</span>
                                                 </div>
                                                 <span class="giasale text-decoration-line-through">200.000đ</span>
                                             </div>
@@ -72,9 +83,6 @@
             </div>
         </div>
         <style>
-            body {
-                background-color: #F3F3F6;
-            }
 
             .dm2 {
                 margin-top: 20px;

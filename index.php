@@ -54,7 +54,7 @@
                     update_tk($id,$user,$pass,$email,$address,$tel);
                     $_SESSION[ 'user' ] = check( $user, $pass );
 
-                    $thongbao = '<div class="alert alert-success alert-dismissible fade show" role="alert">
+                    $thongbao = '<div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
                     <b>Cập nhật tài khoản thành công</b>
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                   </div>';
@@ -71,6 +71,9 @@
             break;
             case 'spchitiet':
             include "./view/sanphamct.php";
+            break;
+            case 'spyeuthich':
+            include "./view/spyeuthich.php";
             break;
 
 
