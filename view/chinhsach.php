@@ -21,7 +21,7 @@
         </style>
     </div>
     <div class="row container-chinhsach mb-5">
-        <div class="col-9">
+        <div class="col-9 mb-3">
             <h1>Chính sách bảo hành</h1>
             <h3>1. Điều kiện bảo hành:</h3>
             Sản phẩm được bảo hành miễn phí nếu đảm bảo tất cả các điều kiện sau:<br>
@@ -37,11 +37,12 @@
             – Sản phẩm bị hư hỏng do lỗi người sử dụng và lỗi hư hỏng không nằm trong phạm vi bảo hành của Nhà sản
             xuất.<br>
             – Với trường hợp phát sinh phí bảo hành, nhân viên chăm sóc khách hàng của DMP Việt Pháp sẽ tư vấn đầy đủ
-            thông tin cho khách hàng trước khi tiến hành các thủ tục bảo hành.<br>
+            thông tin cho khách hàng trước khi tiến hành các thủ tục bảo hành.<br><br>
 
             <h3>2. Thời hạn bảo hành:</h3>
 
             Thời gian bảo hành trong vòng 1 tuần
+            <br><br>
             <h3>3. Phương thức áp dụng bảo hành</h3>
             Thông tin hỗ trợ bảo hành<br>
             Quý khách vui lòng liên hệ qua hotline chăm sóc khách hàng của DMP Việt Pháp 0965 373 366 / 094 1098 641 để

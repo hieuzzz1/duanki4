@@ -1,5 +1,4 @@
 <?php
-    ob_start();
     session_start();
     include "./view/header.php";
     include "./model/pdo.php";
@@ -62,10 +61,7 @@
             include "./view/taikhoan/update_tk.php";
             break;
             
-            case 'dangxuat':
-                session_unset();
-                include "./view/taikhoan/dangnhap.php";
-                break;
+            
             case 'sanpham':
             include "./view/sanpham.php";
             break;
@@ -75,6 +71,29 @@
             case 'spyeuthich':
             include "./view/spyeuthich.php";
             break;
+            case 'tkmuahang':
+                if(isset($_POST['themttmuahang']) && $_POST['themttmuahang']) {
+                    
+                    $diachimuahang = $_POST['diachimuahang'];
+                    $sdtmuahang = $_POST['sdtmuahang'];
+                    themtt($diachimuahang,$sdtmuahang);
+                    // $checked=checktt($diachimuahang,$sdtmuahang);
+                    //     $_SESSION['diachimuahang'] = $checked;
+                    include "./view/home.php";
+                        $thongbao = '<div class="alert alert-success" role="alert">
+                    Thêm thông tin thành công tiếp tục <a href="index.php?act=home" class="alert-link">Mua hàng</a> 
+                  </div>';
+                    }
+
+            include "./view/tkmuahang/tkmuahang.php";
+            break;
+            case 'dangxuat':
+                session_unset();
+                include "./view/taikhoan/dangnhap.php";
+                break;
+            case 'giohang':
+                include "./view/cart/giohang.php";
+                break;
 
 
 
@@ -84,7 +103,7 @@
 
 
 
-
+            
             case 'gioithieu':
                 include "./view/gioithieu.php";
                 break;

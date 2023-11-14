@@ -1,5 +1,6 @@
 <!-- maincontent -->
 <section class="mymaincontent my-3">
+
     <div class="container">
         <div class="row">
             <div class="col-md-9">
@@ -177,86 +178,22 @@
         </div>
         <!-- end-slideshow -->
 
-
+        <?php
+            if(isset($thongbao) && ($thongbao !="")){
+                echo $thongbao;
+            }
+        ?>
         <!-- giỏ hàng - home -->
+        <?php
+            if(isset($_SESSION['user'])) {
+                extract($_SESSION['user']);
+        ?>
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title fw-bold" id="offcanvasRightLabel">GIỎ HÀNG</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
-                <div class="row img mb-5">
-                    <div class="col-3">
-                        <form action="" method="post">
-                            <a href="#">
-                                <img src="https://bizweb.dktcdn.net/thumb/compact/100/429/689/products/apple-iphone-12-mini-3-f12f8dba-9d92-4173-8b32-cc2ce74df353.png"
-                                    alt="sp">
-                            </a>
-                    </div>
-                    <div class="col-6 sphome-ct">
-                        <a href="#">
-                            <div class="tensp">Kem chống nắng</div>
-                        </a>
-                        <div class="quantity">Số lượng</div>
-                        <input type="number">
-
-                    </div>
-                    <div class="col-3 xoa-gia">
-                        <input type="submit" value="Xóa">
-                        <div class="price-home mt-4">
-                            300.000<span>₫</span>
-                        </div>
-                    </div>
-                    </form>
-                </div>
-                <div class="row img mb-5">
-                    <div class="col-3">
-                        <form action="" method="post">
-                            <a href="#">
-                                <img src="https://bizweb.dktcdn.net/thumb/compact/100/429/689/products/apple-iphone-12-mini-3-f12f8dba-9d92-4173-8b32-cc2ce74df353.png"
-                                    alt="sp">
-                            </a>
-                    </div>
-                    <div class="col-6 sphome-ct">
-                        <a href="#">
-                            <div class="tensp">Kem chống nắng</div>
-                        </a>
-                        <div class="quantity">Số lượng</div>
-                        <input type="number">
-
-                    </div>
-                    <div class="col-3 xoa-gia">
-                        <input type="submit" value="Xóa">
-                        <div class="price-home mt-4">
-                            300.000<span>₫</span>
-                        </div>
-                    </div>
-                    </form>
-                </div>
-                <div class="row img mb-5">
-                    <div class="col-3">
-                        <form action="" method="post">
-                            <a href="#">
-                                <img src="https://bizweb.dktcdn.net/thumb/compact/100/429/689/products/apple-iphone-12-mini-3-f12f8dba-9d92-4173-8b32-cc2ce74df353.png"
-                                    alt="sp">
-                            </a>
-                    </div>
-                    <div class="col-6 sphome-ct">
-                        <a href="#">
-                            <div class="tensp">Kem chống nắng</div>
-                        </a>
-                        <div class="quantity">Số lượng</div>
-                        <input type="number">
-
-                    </div>
-                    <div class="col-3 xoa-gia">
-                        <input type="submit" value="Xóa">
-                        <div class="price-home mt-4">
-                            300.000<span>₫</span>
-                        </div>
-                    </div>
-                    </form>
-                </div>
                 <div class="row img mb-5">
                     <div class="col-3">
                         <form action="" method="post">
@@ -384,8 +321,27 @@
                 }
             </style>
         </div>
-
+        <?php
+        
+            }else {
+                echo '';
+        ?>
+        <?php } ?>
         <!-- end giỏ hàng home -->
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Thông báo</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Bạn cần nhập thông tin cá nhân để tiếp tục mua hàng tại shop! <a href="index.php?act=tkmuahang">Nhập thông tin</a>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="product-content">
             <nav>
                 <div class="nav nav-tabs mt-4" id="nav-tab" role="tablist">
@@ -402,60 +358,37 @@
                 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"
                     tabindex="0">
                     <div class="row mx-5">
-                        <?php
-                            foreach ($spnew as $sp) {
-                                extract($sp);
-                                echo '<div class="col-md-3">
-                                <div class="card" style="width: 18rem;">
-                                    <div class="card-body">
-                                        <div class="anhsppp">
-                                            <a href="index.php?act=spchitiet"><img
-                                                    src="https://png.pngtree.com/png-clipart/20200206/ourlarge/pngtree-pink-fresh-cosmetics-set-elements-png-image_2132437.jpg"
-                                                    class="card-img-top" alt="...">
-                                                <p class="card-title">'.$name.'</p>
-                                            </a>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-7">
-                                                
-                                                <div class="giasp mt-4">
-                                                '.$giasp.'<span>₫</span>
-                                                
-                                                </div>
-                                                <span class="giasale text-decoration-line-through">200.000đ</span>
-                                            </div>
-                                            <div class="col-md-2 mt-5 carrt yttt">
-                                                <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fa-solid fa-cart-shopping"></i></a>
-                                            </div>
-                                            <div class="col-md-2 mt-5 carrt">
-                                                <a href="#"><i class="fa-regular fa-heart"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>';
-                            }
-                        ?>
+                        <?php foreach ($spnew as $sp):?>
                         <div class="col-md-3">
                             <div class="card" style="width: 18rem;">
                                 <div class="card-body">
                                     <div class="anhsppp">
-                                        <a href="indextk.php?act=spchitiet"><img
+                                        <a href="index.php?act=spchitiet"><img
                                                 src="https://png.pngtree.com/png-clipart/20200206/ourlarge/pngtree-pink-fresh-cosmetics-set-elements-png-image_2132437.jpg"
                                                 class="card-img-top" alt="...">
-                                            <p class="card-title">Nước tẩy trang</p>
+                                            <p class="card-title">
+                                                <?=$sp['name']?>
+                                            </p>
                                         </a>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-7">
+
                                             <div class="giasp mt-4">
-                                                100.000đ
+                                                <?=$sp['giasp']?><span>₫</span>
+
                                             </div>
-                                            <span class="giasale text-decoration-line-through">200.000đ</span>
+                                            <span class="giasale text-decoration-line-through">200.000đd</span>
                                         </div>
-                                        <div class="col-md-2 mt-5 carrt yttt">
-                                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-                                        </div>
+                                        <?php
+                                        if (isset($_SESSION['user'])){
+                                            echo '<div class="col-md-2 mt-5 carrt yttt">
+                                            <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fa-solid fa-cart-shopping"></i></a>
+                                        </div>';
+                                        }else {
+                                            echo '<div class="col-md-2 mt-5 carrt yttt"><a href="index.php?act=themvaogiohang" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-cart-shopping"></i></a></div>';
+                                        }
+                                        ?>
                                         <div class="col-md-2 mt-5 carrt">
                                             <a href="#"><i class="fa-regular fa-heart"></i></a>
                                         </div>
@@ -463,81 +396,98 @@
                                 </div>
                             </div>
                         </div>
+                        <?php endforeach; ?>
 
                     </div>
                 </div>
                 <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab"
                     tabindex="0">
                     <div class="row mx-5">
-                        <?php
-                            foreach ($spnew as $sp) {
-                                extract($sp);
-                                echo '<div class="col-md-3">
-                                <div class="card" style="width: 18rem;">
-                                    <div class="card-body">
-                                        <div class="anhsppp">
-                                            <a href="index.php?act=spchitiet"><img
-                                                    src="https://png.pngtree.com/png-clipart/20200206/ourlarge/pngtree-pink-fresh-cosmetics-set-elements-png-image_2132437.jpg"
-                                                    class="card-img-top" alt="...">
-                                                <p class="card-title">'.$name.'</p>
-                                            </a>
+                        <?php foreach ($spnew as $sp):?>
+                        <div class="col-md-3">
+                            <div class="card" style="width: 18rem;">
+                                <div class="card-body">
+                                    <div class="anhsppp">
+                                        <a href="index.php?act=spchitiet"><img
+                                                src="https://png.pngtree.com/png-clipart/20200206/ourlarge/pngtree-pink-fresh-cosmetics-set-elements-png-image_2132437.jpg"
+                                                class="card-img-top" alt="...">
+                                            <p class="card-title">
+                                                <?=$sp['name']?>
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-7">
+
+                                            <div class="giasp mt-4">
+                                                <?=$sp['giasp']?><span>₫</span>
+
+                                            </div>
+                                            <span class="giasale text-decoration-line-through">200.000đd</span>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-md-7">
-                                                <div class="giasp mt-4">
-                                                '.$giasp.'$
-                                                </div>
-                                                <span class="giasale text-decoration-line-through">200.000đ</span>
-                                            </div>
-                                            <div class="col-md-2 mt-5 carrt yttt">
-                                                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-                                            </div>
-                                            <div class="col-md-2 mt-5 carrt">
-                                                <a href="#"><i class="fa-regular fa-heart"></i></a>
-                                            </div>
+                                        <?php
+                                        if (isset($_SESSION['user'])){
+                                            echo '<div class="col-md-2 mt-5 carrt yttt">
+                                            <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fa-solid fa-cart-shopping"></i></a>
+                                        </div>';
+                                        }else {
+                                            echo '<div class="col-md-2 mt-5 carrt yttt"><a href="index.php?act=themvaogiohang" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-cart-shopping"></i></a></div>';
+                                        }
+                                    ?>
+                                        <div class="col-md-2 mt-5 carrt">
+                                            <a href="#"><i class="fa-regular fa-heart"></i></a>
                                         </div>
                                     </div>
                                 </div>
-                            </div>';
-                            }
-                        ?>
+                            </div>
+                        </div>
+                        <?php endforeach; ?>
+
                     </div>
                 </div>
                 <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab"
                     tabindex="0">
                     <div class="row mx-5">
-                        <?php
-                            foreach ($spnew as $sp) {
-                                extract($sp);
-                                echo '<div class="col-md-3">
-                                <div class="card" style="width: 18rem;">
-                                    <div class="card-body">
-                                        <div class="anhsppp">
-                                            <a href="index.php?act=spchitiet"><img
-                                                    src="https://png.pngtree.com/png-clipart/20200206/ourlarge/pngtree-pink-fresh-cosmetics-set-elements-png-image_2132437.jpg"
-                                                    class="card-img-top" alt="...">
-                                                <p class="card-title">'.$name.'</p>
-                                            </a>
+                        <?php foreach ($spnew as $sp):?>
+                        <div class="col-md-3">
+                            <div class="card" style="width: 18rem;">
+                                <div class="card-body">
+                                    <div class="anhsppp">
+                                        <a href="index.php?act=spchitiet"><img
+                                                src="https://png.pngtree.com/png-clipart/20200206/ourlarge/pngtree-pink-fresh-cosmetics-set-elements-png-image_2132437.jpg"
+                                                class="card-img-top" alt="...">
+                                            <p class="card-title">
+                                                <?=$sp['name']?>
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-7">
+
+                                            <div class="giasp mt-4">
+                                                <?=$sp['giasp']?><span>₫</span>
+
+                                            </div>
+                                            <span class="giasale text-decoration-line-through">200.000đd</span>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-md-7">
-                                                <div class="giasp mt-4">
-                                                '.$giasp.'$
-                                                </div>
-                                                <span class="giasale text-decoration-line-through">200.000đ</span>
-                                            </div>
-                                            <div class="col-md-2 mt-5 carrt yttt">
-                                                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-                                            </div>
-                                            <div class="col-md-2 mt-5 carrt">
-                                                <a href="#"><i class="fa-regular fa-heart"></i></a>
-                                            </div>
+                                        <?php
+                                        if (isset($_SESSION['user'])){
+                                            echo '<div class="col-md-2 mt-5 carrt yttt">
+                                            <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fa-solid fa-cart-shopping"></i></a>
+                                        </div>';
+                                        }else {
+                                            echo '<div class="col-md-2 mt-5 carrt yttt"><a href="index.php?act=themvaogiohang" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-cart-shopping"></i></a></div>';
+                                        }
+                                    ?>
+                                        <div class="col-md-2 mt-5 carrt">
+                                            <a href="#"><i class="fa-regular fa-heart"></i></a>
                                         </div>
                                     </div>
                                 </div>
-                            </div>';
-                            }
-                        ?>
+                            </div>
+                        </div>
+                        <?php endforeach; ?>
+
                     </div>
                 </div>
             </div>

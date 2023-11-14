@@ -1,21 +1,158 @@
 <div class="containersp">
-    <div class="dieuhuong mb-4">
-        <div class="dhmenu mb-3">
-        <div class="col-md-9 mt-3 mb-4 iconcsss">
-        <a href="index.php" class="text-decoration-none text-dark">Trang chủ</a> <i
-            class="fa-solid fa-chevron-right"></i> <span class="text-danger">Tất cả sản phẩm</span>
+
+    
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title fw-bold" id="offcanvasRightLabel">GIỎ HÀNG</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="row img mb-5">
+                <div class="col-3">
+                    <form action="" method="post">
+                        <a href="#">
+                            <img src="https://bizweb.dktcdn.net/thumb/compact/100/429/689/products/apple-iphone-12-mini-3-f12f8dba-9d92-4173-8b32-cc2ce74df353.png"
+                                alt="sp">
+                        </a>
+                </div>
+                <div class="col-6 sphome-ct">
+                    <a href="#">
+                        <div class="tensp">Kem chống nắng</div>
+                    </a>
+                    <div class="quantity">Số lượng</div>
+                    <input type="number">
+
+                </div>
+                <div class="col-3 xoa-gia">
+                    <input type="submit" value="Xóa">
+                    <div class="price-home mt-4">
+                        300.000<span>₫</span>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+        <div class="dathang-home">
+            <div class="row mb-3">
+                <div class="col-6">Tổng tiền:</div>
+                <div class="col-6">
+                    <div class="giasp-home-dathang">
+                        300.000<span>₫</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <div class="col">
+                    <input type="submit" value="Đặt Hàng">
+                </div>
+            </div>
+
+        </div>
+
         <style>
-            .iconcsss i {
-                font-size: 14px;
-                color: #989898;
-                margin-left: 5px;
-                margin-right: 5px;
+            .dathang-home {
+                height: 200px;
+                padding: 20px;
             }
-            .iconcsss {
-                margin-left: -23px;
+
+            .dathang-home input {
+                width: 350px;
+                height: 60px;
+                background-color: #b85050;
+                color: #fff;
+                border-radius: 4px;
+                border: none;
+                font-size: 18px;
+            }
+
+            .dathang-home input:hover {
+                border: 1px solid #b85050;
+                background-color: #ffffff;
+                color: #b85050;
+            }
+
+            .img {
+                box-sizing: border-box;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+
+            #offcanvasRight {
+                max-width: 400px;
+            }
+
+            .xoa-gia {
+                margin-left: -15px;
+            }
+
+            .xoa-gia input {
+                font-size: 14px;
+                border: 0.3px solid #ccc;
+                margin-left: 10px;
+                margin-top: 5px;
+                color: #fff;
+                background-color: #b85050;
+            }
+
+            .price-home {
+                font-size: 13px;
+                color: red;
+            }
+
+            .giasp-home-dathang {
+                color: red;
+                font-size: 18px;
+                margin-left: 87px;
+            }
+
+            .quantity {
+                font-size: 13px;
+            }
+
+            .sphome-ct .tensp {
+                margin-top: 4px;
+                margin-bottom: 10px;
+                font-size: 14px;
+            }
+
+            .sphome-ct input {
+                max-width: 40px;
+                height: 20px;
+                font-size: 14px;
+            }
+
+            .img img {
+                max-width: 80px;
+            }
+
+            .img a {
+                text-decoration: none;
+                color: black;
+            }
+
+            .img:hover a {
+                color: rgb(216, 113, 113);
             }
         </style>
     </div>
+    
+    <div class="dieuhuong mb-4">
+        <div class="dhmenu mb-3">
+            <div class="col-md-9 mt-3 mb-4 iconcsss">
+                <a href="index.php" class="text-decoration-none text-dark">Trang chủ</a> <i
+                    class="fa-solid fa-chevron-right"></i> <span class="text-danger">Tất cả sản phẩm</span>
+                <style>
+                    .iconcsss i {
+                        font-size: 14px;
+                        color: #989898;
+                        margin-left: 5px;
+                        margin-right: 5px;
+                    }
+
+                    .iconcsss {
+                        margin-left: -23px;
+                    }
+                </style>
+            </div>
             <style>
                 .dhmenu {
                     margin-left: 150px;
@@ -47,13 +184,15 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-md-7">
+                                                
                                                 <div class="giasp mt-4">
                                                 '.$giasp.'<span>₫</span>
+                                                
                                                 </div>
-                                                <span class="giasale text-decoration-line-through">200.000đ</span>
+                                                <span class="giasale text-decoration-line-through">200.000đd</span>
                                             </div>
                                             <div class="col-md-2 mt-5 carrt yttt">
-                                                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                                <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fa-solid fa-cart-shopping"></i></a>
                                             </div>
                                             <div class="col-md-2 mt-5 carrt">
                                                 <a href="#"><i class="fa-regular fa-heart"></i></a>
@@ -64,6 +203,7 @@
                             </div>';
                             }
                         ?>
+
                     </div>
                 </div>
             </div>
@@ -83,7 +223,6 @@
             </div>
         </div>
         <style>
-
             .dm2 {
                 margin-top: 20px;
             }
