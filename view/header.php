@@ -16,16 +16,16 @@
 </head>
 
 <body>
-<div id="scrollToTopBtn" onclick="scrollToTop()">&#8593; Top</div>
-<style>
+    <div id="scrollToTopBtn" onclick="scrollToTop()"><i class="fa-solid fa-arrow-up"></i></div>
+    <style>
         #scrollToTopBtn {
             display: none;
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background-color: #007BFF;
+            background-color: #DC3545;
             color: #fff;
-            padding: 10px;
+            padding: 10px 20px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
@@ -33,10 +33,10 @@
         }
 
         #scrollToTopBtn:hover {
-            background-color: #0056b3;
+            background-color: #ff9f96;
         }
-</style>
-<script>
+    </style>
+    <script>
         // Wait for the DOM to be ready
         document.addEventListener("DOMContentLoaded", function () {
             // Get the button
@@ -58,7 +58,7 @@
             document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
         }
 
-</script>
+    </script>
     <!-- header -->
     <section class="myheader">
         <div class="container paddingg">
@@ -113,13 +113,15 @@
                                 <div class="col-10">
                                     Xin chào!<br>
                                     <a class="nav-link dropdown-toggle text-danger fw-bold" href="#" role="button"
-                                        data-bs-toggle="dropdown" aria-expanded="false"><?=$user?>
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <?=$user?>
                                     </a>
                                     <ul class="dropdown-menu active-menuu">
                                         <li><a class="dropdown-item" href="index.php?act=update_tk">Cập nhật tài
                                                 khoản</a>
                                         </li>
-                                        <li><a class="dropdown-item" href="index.php?act=dangxuat">Đơn hàng của bạn</a></li>
+                                        <li><a class="dropdown-item" href="index.php?act=dangxuat">Đơn hàng của bạn</a>
+                                        </li>
                                         <li><a class="dropdown-item" href="index.php?act=dangxuat">Đăng xuất</a></li>
                                         <style>
                                             .active-menuu li a:active {
@@ -138,8 +140,8 @@
                                         
                                 ?>
                                 <div class="col-10">
-                                    Xin chào!<br> <a href="index.php?act=dangnhap"
-                                        class="text-decoration-none"><strong class="text-danger fs-6">Đăng
+                                    Xin chào!<br> <a href="index.php?act=dangnhap" class="text-decoration-none"><strong
+                                            class="text-danger fs-6">Đăng
                                             nhập</strong></a>
                                 </div>
                                 <?php }  ?>
@@ -151,7 +153,7 @@
                 <!-- sign in -->
                 <div class="col-md-2 pt-2 d-flex mt-2">
                     <div class="row">
-                        <div class="col"><a href="#" class="position-relative ms-1">
+                        <div class="col"><a href="index.php?act=giohang" class="position-relative ms-1">
                                 <span><i class="fa-solid fa-cart-shopping text-dark fs-4"></i></span>
                                 <span
                                     class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
@@ -203,7 +205,8 @@
                                             Sản phẩm
                                         </a>
                                         <ul class="dropdown-menu active-menuu">
-                                            <li><a class="dropdown-item" href="index.php?act=sanpham">Tất cả sản phẩm</a></li>
+                                            <li><a class="dropdown-item" href="index.php?act=sanpham">Tất cả sản
+                                                    phẩm</a></li>
                                             <style>
                                                 .active-menuu li a:active {
                                                     background-color: none !important;
