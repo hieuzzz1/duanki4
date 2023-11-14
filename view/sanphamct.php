@@ -236,7 +236,7 @@
             </div>
 
             <div class="soluong mt-2 mb-2">
-                <h6>Số lượng</h6><input type="number" name="" id="" value="100">
+                <h6>Số lượng</h6><input type="number" name="" id="" value="1">
             </div>
 
             <div class="row btn-muahang mt-2 mb-2">

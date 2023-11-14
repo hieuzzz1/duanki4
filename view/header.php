@@ -91,8 +91,6 @@
                                 </div>
                                 <?php
                                     }else {
-                                
-                                        
                                 ?>
                                 <div class="col-10">
                                     Xin chào!<br> <a href="index.php?act=dangnhap"
