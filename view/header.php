@@ -16,6 +16,49 @@
 </head>
 
 <body>
+<div id="scrollToTopBtn" onclick="scrollToTop()">&#8593; Top</div>
+<style>
+        #scrollToTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #scrollToTopBtn:hover {
+            background-color: #0056b3;
+        }
+</style>
+<script>
+        // Wait for the DOM to be ready
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get the button
+            var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function () {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    scrollToTopBtn.style.display = "block";
+                } else {
+                    scrollToTopBtn.style.display = "none";
+                }
+            };
+        });
+
+        // Scroll to the top of the document when the button is clicked
+        function scrollToTop() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+        }
+
+</script>
     <!-- header -->
     <section class="myheader">
         <div class="container paddingg">
