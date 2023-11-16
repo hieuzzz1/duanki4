@@ -1,5 +1,6 @@
 <?php 
 
+
     function insert_danhmuc($tendm){
         $sql ="insert into danhmuc(tendm) values('$tendm')";
         pdo_execute($sql);
@@ -26,5 +27,7 @@
         $sql =" update danhmuc set name ='".$tendm."' where id=".$id;
         pdo_execute($sql);
     }
+
+
 
 ?>

@@ -2,35 +2,33 @@
     <div class="col-md-3 dm2">
         <ul class="list-group">
             <div class="list-group-item active dm">Danh mục sản phẩm</div>
-            <li class="list-group-item"><a href="#">Kem chống nắng</a></li>
-            <li class="list-group-item"><a href="#">Sữa rửa mặt</a></li>
-            <li class="list-group-item"><a href="#">Sữa tắm</a></li>
-            <li class="list-group-item"><a href="#">Nước tẩy trang</a></li>
-            <li class="list-group-item"><a href="#">Nước hoa</a></li>
+
+
+                 <?php
+                    foreach($dsdm as $dm){
+                        extract($dm);
+                        $linkdm = "index.php?act=sanpham&iddm=".$id;
+                        // echo '<li><a href="'.$linkdm.'">'.$tendm.'</a></li>';
+                        echo '<li class="list-group-item"><a href="'.$linkdm.'">'.$tendm.'</a></li>';
+                    }
+                   ?>
         </ul>
 
         <div class="col mt-3 container-spnew">
             <div class="list-group-item active dm text-white">Sản phẩm mới nhất</div>
             <div class="row">
                 <div class="col container-img">
-                    <a href="#">
-                        <div class="img">
-                            <img src="./img//sanpham/sp4.png" alt="sp">
-                            <span>Kem chống nắng</span>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="img">
-                            <img src="./img//sanpham/sp4.png" alt="sp">
-                            <span>Kem chống nắng</span>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="img">
-                            <img src="./img//sanpham/sp4.png" alt="sp">
-                            <span>Kem chống nắng</span>
-                        </div>
-                    </a>
+                    <?php
+                        foreach ($spyt as $yt) {
+                            extract($yt);
+                            $linksp = 'index.php?act=sanphamct&idsp=' . $id;
+                           
+                            echo '<div class="selling_products" style="width:100%;">
+                                    <img src="./img//sanpham/sp4.png" alt="sp">
+                                    <a href="' . $linksp . '">' . $name . '</a>
+                                </div>';
+                        }   
+                        ?>
                 </div>
             </div>
         </div>
