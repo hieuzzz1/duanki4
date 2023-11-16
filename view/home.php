@@ -42,13 +42,15 @@
                 <ul class="list-group ">
                     <div class="list-group-item active dm" aria-current="true">Danh mục sản phẩm</div>
                     <div class="dm3">
-                        <li class="list-group-item"><a href="">Kem chống nắng</a></li>
-                        <li class="list-group-item"><a href="">Sữa rửa mặt</a></li>
-                        <li class="list-group-item"><a href="">Sữa tắm</a></li>
-                        <li class="list-group-item"><a href="">Nước tẩy trang</a></li>
-                        <li class="list-group-item"><a href="">Nước hoa</a></li>
-                        <li class="list-group-item"><a href="">Sữa tắm</a></li>
-                        <li class="list-group-item"><a href="">Sữa tắm</a></li>
+                        
+                 <?php
+                    foreach($dsdm as $dm){
+                        extract($dm);
+                        $linkdm = "index.php?act=sanpham&iddm=".$id;
+                
+                        echo '<li class="list-group-item"><a href="'.$linkdm.'">'.$tendm.'</a></li>';
+                    }
+                   ?>
                     </div>
                 </ul>
             </div>
@@ -504,62 +506,30 @@
                 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"
                     tabindex="0">
                     <div class="row mx-5">
-                        <div class="col-md-3 my-4">
-                            <a href="#" class="baiposs">
-                                <div class="card" style="width: 18rem;">
-                                    <img src="http://nhom2mp.vnn.mn/files/tin/11/jpg/cach-dung-serum-cho-lan-da-khoe-cang-muot-tu-nhien.jpg"
-                                        class="card-img-top" alt="...">
-                                    <div class="card-body bv">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make
+                    <?php  foreach ($postnew as $post):
+                        $lickpost="index.php?act=baiviet&idpost=".$id;
+                        ?>
+                        <div class="col-md-3">
+                            <div class="card" style="width: 18rem;">
+                                <div class="card-body">
+                                    <div class="anhsppp">
+                                        <a href="index.php?act=baiviet"><img src="http://nhom2mp.vnn.mn/files/tin/11/jpg/cach-dung-serum-cho-lan-da-khoe-cang-muot-tu-nhien.jpg"
+                                        class="card-img-top" alt="...">  </a>
+                                    </div>  
+                                    <div class="sau">
+                                        <p class="card-title" style="font-weight: 700;">
+                                            <?=$post['name_post']?>
+                                        </p>
+                                        <p class="card_text">Some quick example text to build on the card title and make
                                             up
-                                            the bulk of the card's content.</p>
+                                            the bulk of the card's content.
+                                        </p>                                                  
                                     </div>
                                 </div>
-                            </a>
+                            </div>
                         </div>
-                        <div class="col-md-3 my-4">
-                            <a href="#" class="baiposs">
-                                <div class="card" style="width: 18rem;">
-                                    <img src="http://nhom2mp.vnn.mn/files/tin/11/jpg/cach-dung-serum-cho-lan-da-khoe-cang-muot-tu-nhien.jpg"
-                                        class="card-img-top" alt="...">
-                                    <div class="card-body bv">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make
-                                            up
-                                            the bulk of the card's content.</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-3 my-4">
-                            <a href="#" class="baiposs">
-                                <div class="card" style="width: 18rem;">
-                                    <img src="http://nhom2mp.vnn.mn/files/tin/11/jpg/cach-dung-serum-cho-lan-da-khoe-cang-muot-tu-nhien.jpg"
-                                        class="card-img-top" alt="...">
-                                    <div class="card-body bv">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make
-                                            up
-                                            the bulk of the card's content.</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-3 my-4">
-                            <a href="#" class="baiposs">
-                                <div class="card" style="width: 18rem;">
-                                    <img src="http://nhom2mp.vnn.mn/files/tin/11/jpg/cach-dung-serum-cho-lan-da-khoe-cang-muot-tu-nhien.jpg"
-                                        class="card-img-top" alt="...">
-                                    <div class="card-body bv">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make
-                                            up
-                                            the bulk of the card's content.</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+                        <?php endforeach; ?>
+
                     </div>
                 </div>
             </div>

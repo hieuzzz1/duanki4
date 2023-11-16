@@ -4,8 +4,13 @@
     include "./model/pdo.php";
     include "./model/sanpham.php";
     include "./model/taikhoan.php";
+    include "./model/post.php";
+    include "./model/danhmuc.php";
     
     $spnew=load_all_sp_home();
+    $postnew=load_all_post_home();
+    $dsdm = loatAll_danhmuc();
+    $spyt=loatAll_sanpham_top5();
 
     if ( ( isset( $_GET[ 'act' ] ) ) && ( $_GET[ 'act' ] != '' ) ){
         $act = $_GET[ 'act' ];
@@ -68,6 +73,18 @@
             case 'spchitiet':
             include "./view/sanphamct.php";
             break;
+
+            case "baiviet":
+                if (isset($_GET['idpost'])&& $_GET['idpost'] > 0){  
+                    $id = $_GET['idpost'];
+                    $onepost = loadone_post($id);
+                    include "./view/baiviet.php";
+                }else{
+                        include "./view/home.php";
+                    }
+                 include "./view/baiviet.php";
+                break;
+
             case 'spyeuthich':
             include "./view/spyeuthich.php";
             break;
@@ -95,15 +112,6 @@
                 include "./view/cart/giohang.php";
                 break;
 
-
-
-
-
-
-
-
-
-            
             case 'gioithieu':
                 include "./view/gioithieu.php";
                 break;
