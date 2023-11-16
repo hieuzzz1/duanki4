@@ -207,7 +207,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 dm2">
+            <!-- <div class="col-md-3 dm2">
                 <ul class="list-group ">
                     <div class="list-group-item active dm" aria-current="true">Danh mục sản phẩm</div>
                     <div class="dm3">
@@ -220,7 +220,7 @@
                         <li class="list-group-item"><a href="">Sữa tắm</a></li>
                     </div>
                 </ul>
-            </div>
+            </div> -->
         </div>
         <style>
             .dm2 {

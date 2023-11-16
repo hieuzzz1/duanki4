@@ -1,6 +1,5 @@
-<div class="container">
-<div class="row">
-    <div class="col-md-3 mb-3 homead " >
+
+    <div class="col-md-3 homead " >
     <ul class="list-group  ">
             <div class="list-group-item active dm" style="background-color:#ff9f96 ; border: red;">ADMIN MENU</div>
             <li class="list-group-item"><a href="#" >Cập nhật mới</a></li>
@@ -11,23 +10,6 @@
             <li class="list-group-item"><a href="#">Thống kê</a></li>
         </ul>
     </div>
-    <!-- <div class="col-md-9 homead">
-    <ul class="list-group  ">
-            <div class="list-group-item active dm" style="background-color:#ff9f96 ; border: red;">CẬP NHẬT MỚI</div>
-    </div> -->
-</div>
-</div>
-</div>
-<style>
-    .homead{
-        margin-top: 20px;
-        margin-bottom: 20px;
-        font-weight: 500;
-        
-    }
-    a{
-        color: black;
-    }
-        
-    
-</style>
+   
+
+  
