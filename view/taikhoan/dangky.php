@@ -11,7 +11,7 @@
                 }
 
                 body {
-                    background-color: #F3F3F6;
+                    background-color: #e6e6f1;
                 }
             </style>
         </div>

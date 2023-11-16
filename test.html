@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .select-box {
+            width: 380px;
+            position: relative;
+        }
+
+        .select-option {
+            position: relative;
+        }
+
+        .select-option input {
+            width: 300px;
+            background-color: #fff;
+            color: black;
+            border-radius: 7px;
+            cursor: pointer;
+            font-size: 22px;
+            padding: 10px;
+            border: 0 !important;
+            outline: 0 !important;
+            border: 1px solid black !important;
+        }
+
+        .select-option:after {
+            content: "";
+            border-top: 12px solid #000;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            position: absolute;
+            right: -15px;
+            top: 50%;
+            margin-top: -8px;
+        }
+
+        .content {
+            background-color: #fff;
+            position: absolute;
+            color: #000;
+            border-radius: 7px;
+            margin-top: 15px;
+            width: 90%;
+            z-index: 999;
+            padding: 5px;
+            display: none;
+            border-left: 1px solid #ccc;
+            border-right: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .search input {
+            width: 93%;
+            border: 1px solid #b3b3b3;
+            font-size: 17px;
+            padding: 12px;
+            outline: 0;
+            border-radius: 5px;
+        }
+
+        .options {
+            max-height: 200px;
+            overflow-y: auto;
+            padding: 0;
+        }
+
+        .options li {
+            padding: 10px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .options li:hover {
+            background-color: rgb(236, 236, 236);
+        }
+
+        .select-box.active .content {
+            display: block;
+        }
+
+        .select-box.active .select-option:after {
+            transform: rotate(-180deg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="select-box">
+        <div class="select-option">
+            <input type="text" placeholder="Địa chỉ" id="soValue" readonly name="">
+
+        </div>
+        <div class="content">
+            <div class="search">
+                <input type="text" placeholder="tìm kiếm" id="optionSearch" name="">
+            </div>
+            <ul class="options">
+                <li>Hiếu</li>
+                <li>Thái</li>
+                <li>Long</li>
+                <li>Đức</li>
+                <li>Nhật</li>
+                <li>Ok</li>
+                <li>Minh</li>
+                <li>Hải</li>
+                <li>thị</li>
+            </ul>
+        </div>
+
+    </div>
+
+
+
+    <script>
+        const selectBox = document.querySelector('.select-box');
+        const selectOption = document.querySelector('.select-option');
+        const soValue = document.querySelector('#soValue');
+        const optionSearch = document.querySelector('#optionSearch');
+        const options = document.querySelector('.options');
+        const optionsList = document.querySelectorAll('.options li');
+
+
+        selectOption.addEventListener('click', function () {
+            selectBox.classList.toggle('active');
+        });
+        optionsList.forEach(function (optionsListSingle) {
+            optionsListSingle.addEventListener('click', function () {
+                text = this.textContent;
+                soValue.value = text;
+                selectBox.classList.remove('active');
+            })
+        });
+
+        optionSearch.addEventListener('keyup', function () {
+            var filter, li, i, textValue;
+            filter = optionSearch.value.toUpperCase();
+            li = options.getElementsByTagName('li');
+            for (i = 0; i < li.length; i++) {
+                liCount = li[i];
+                textValue = liCount.textContent || liCount.innerText;
+                if (textValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = '';
+
+                }
+                else {
+                    li[i].style.display = 'none';
+                }
+
+            }
+        })
+    </script>
+
+</body>
+
+</html>

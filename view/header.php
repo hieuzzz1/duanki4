@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo Dự án 1</title>
+    <title>Dự án 1</title>
     <link rel="stylesheet" href="./Giaodien/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="../img/style.css">
@@ -65,7 +65,7 @@
             <div class="row">
                 <!-- logo -->
                 <div class="col-md-2">
-                    <a href="index.php"><img src="./img/logo/logo_duan1HT.png" style="max-width: 100%; height: 65px;"
+                    <a href="index.php"><img src="./img/logo/anh_logo_duan1.png" style="max-width: 100%; height: 65px;"
                             class="img-fluid" alt=""></a>
                 </div>
                 <!-- search -->
@@ -108,8 +108,8 @@
                                 <?php
                                     if(isset($_SESSION['user'])) {
                                         extract($_SESSION['user']);
-                                    
                                 ?>
+                                 
                                 <div class="col-10">
                                     Xin chào!<br>
                                     <a class="nav-link dropdown-toggle text-danger fw-bold" href="#" role="button"
@@ -136,9 +136,10 @@
                                 </div>
                                 <?php
                                     }else {
-                                
+
                                         
                                 ?>
+                                 
                                 <div class="col-10">
                                     Xin chào!<br> <a href="index.php?act=dangnhap" class="text-decoration-none"><strong
                                             class="text-danger fs-6">Đăng

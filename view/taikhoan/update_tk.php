@@ -121,7 +121,7 @@
     .tt {
         padding: 20px 30px;
         background-color: #ffffff;
-        color: #ccc;
+        color: #949494;
         margin-top: 20px;
         width: 1307px;
     }
