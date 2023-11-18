@@ -1,7 +1,7 @@
 
 <div class="container">
     <div class="row">
-        <!-- <div class="col-md-3 homead">
+        <div class="col-md-3 homead">
             <ul class="list-group">
                 <div class="list-group-item active dm" style="background-color:#ff9f96 ; border: red;">ADMIN MENU</div>
                 <li class="list-group-item"><a href="#" >Cập nhật mới</a></li>
@@ -11,8 +11,7 @@
                 <li class="list-group-item"><a href="#">Quản lý bình luận</a></li>
                 <li class="list-group-item"><a href="#">Thống kê</a></li>
             </ul>
-        </div> -->
-        
+        </div>
         <?php
         include "./boxright.php";
         ?>

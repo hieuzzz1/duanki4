@@ -1,8 +1,7 @@
 <?php
     include "./header.php";
-    include "./danhmuc/add.php";
-    // include "../model/danhmuc.php";
-    // include "../model/pdo.php";
+    include "../model/danhmuc.php";
+    include "../model/pdo.php";
     
 
     if(isset($_GET['act'])){
@@ -18,8 +17,8 @@
                 include "danhmuc/add.php";
                 break;
 
-            case 'list':
-                // $listdanhmuc=loadall();
+            case 'listdm':
+                $listdanhmuc=loadall();
                 include "danhmuc/list.php";
                 break;
             
@@ -40,9 +39,9 @@
 
             case 'updatedm':
                 if(isset($_POST['capnhat'])&& ($_POST['capnhat'])){
-                    $tenloai = $_POST['tenloai'];
+                    $tendm = $_POST['tendm'];
                     $id = $_POST['id'];
-                    updatedm($tenloai,$id);
+                    updatedm($tendm,$id);
                     $thongbao ="Cập nhật thành công";
                 }
                 $listdanhmuc=loadall();

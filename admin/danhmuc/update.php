@@ -15,7 +15,7 @@
                     </div>
                     <div class="row marginboton10">
                         Tên Loại <br>
-                        <input type="text" name="tenloai" value="<?php if(isset($name)&&($name!=0)) echo $name; ?>">
+                        <input type="text" name="tendm" value="<?php if(isset($tendm)&&($tendm!=0)) echo $tendm; ?>">
                     </div>
                     <div class="row marginboton10">
                         <input type="hidden" name="id" value="<?php if(isset($id)&&($id>0)) echo $id; ?>">

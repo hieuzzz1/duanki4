@@ -1,20 +1,14 @@
+
 <div class="container">
-<div class="row"></div>
-    <div class="col-md-3 homead " >
-    <ul class="list-group  ">
-            <div class="list-group-item active dm" style="background-color:#ff9f96 ; border: red;">ADMIN MENU</div>
-            <li class="list-group-item"><a href="#" >Cập nhật mới</a></li>
-            <li class="list-group-item"><a href="index.php?act=adddm" >Quản lý danh mục</a></li>
-            <li class="list-group-item"><a href="#">Quản lý sản phẩm</a></li>
-            <li class="list-group-item"><a href="#">Quản lý đơn hàng</a></li>
-            <li class="list-group-item"><a href="#">Quản lý bình luận</a></li>
-            <li class="list-group-item"><a href="#">Thống kê</a></li>
-        </ul>
-    </div>
-    <div class="col-md-9 homead">
-    <ul class="list-group  ">
-            <div class="list-group-item active dm" style="background-color:#ff9f96 ; border: red;">CẬP NHẬT MỚI</div>
-            <div class="row">
+    <div class="row">
+            <?php 
+                include "./boxright.php";
+            ?>
+        <div class="col-md-9 homead ">
+                <ul class="list-group  ">
+                        <div class="list-group-item active dm" style="background-color:#ff9f96 ; border: red;">CẬP NHẬT MỚI</div>
+                </ul>
+                <div class="row">
             <div class="row frmtitle">
                 <h1>DANH SÁCH LOẠI HÀNG</h1>
             </div>
@@ -37,7 +31,7 @@
                                     '<tr>
                                         <td><input type="checkbox" name="" id=""></td>
                                         <td>'.$id.'</td>
-                                        <td>'.$name.'</td>
+                                        <td>'.$tendm.'</td>
                                         <td><a href="'.$suadm.'"><input type="button" value="Sửa"></a>  <a href="'.$xoadm.'"><input type="button" value="Xóa"></a></td>
                                     </tr>';
                                 
@@ -53,11 +47,13 @@
                     <a href="index.php?act=adddm"><input type="button" value="Nhập thêm"></a>
                 </div>
             </div>
+            </div>
         </div>
     </div>
 </div>
-</div>
 
 
-  
-<!--  -->
+
+            
+ 
+

@@ -71,7 +71,7 @@ ob_start();
                     $sdtmuahang = $_POST['sdtmuahang'];
                     themtt($diachimuahang,$sdtmuahang);
                     // $checkttmh=checktt($diachimuahang,$sdtmuahang);
-                        $_SESSION['diachimuahang'] = $checkttmh;
+                        // $_SESSION['diachimuahang'] = $checkttmh;
                     include "./view/home.php";
                         $thongbao = '<div class="alert alert-success" role="alert">
                     Thêm thông tin thành công tiếp tục <a href="index.php?act=home" class="alert-link">Mua hàng</a> 
@@ -91,9 +91,15 @@ ob_start();
             case 'sanpham':
                 include "./view/sanpham.php";
                 break;
+            case 'spchitiet':
+                include "./view/sanphamct.php";
+                break;
 
             case 'thanhtoan':
                 include "./view/cart/thanhtoan.php";
+                break;
+            case 'donhangthanhcong':
+                include "./view/cart/donhangthanhcong.php";
                 break;
 
             case 'gioithieu':
