@@ -1,5 +1,5 @@
 <?php
-ob_start();
+    ob_start();
     session_start();
     include "./view/header.php";
     include "./model/pdo.php";

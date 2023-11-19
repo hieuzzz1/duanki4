@@ -1,65 +1,71 @@
 <?php
-    include "./header.php";
-    include "../model/danhmuc.php";
+session_start();
+    include "../admin/header.php";
+    include "../admin/footer.php";
     include "../model/pdo.php";
-    
-
-    if(isset($_GET['act'])){
-        $act = $_GET['act'];
+    include "../model/danhmuc.php";
+    $listdanhmuc=loadall();
+    if ( ( isset( $_GET[ 'act' ] ) ) && ( $_GET[ 'act' ] != '' ) ){
+        $act = $_GET[ 'act' ];
         switch ($act) {
-            case 'adddm':
-                // Kiểm tra xem người dùng có click vào nút add k ?
-                if(isset($_POST['themmoi'])&& ($_POST['themmoi'])){
-                    $tendm = $_POST['tendm'];
-                    insert_danhmuc($tendm);
-                    $thongbao ="Thêm thành công";
-                }
-                include "danhmuc/add.php";
+            case "list_tk":
+                include "../admin/taikhoan/list_tk.php";
                 break;
 
-            case 'listdm':
+            case "list_danhmuc":
                 $listdanhmuc=loadall();
-                include "danhmuc/list.php";
+                include "../admin/danhmuc/list_danhmuc.php";
                 break;
-            
-            case 'xoadm':
-                if(isset($_GET['id'])&& ($_GET['id']>0)){
+
+            case "themdanhmuc":
+                if(isset($_POST['themmoidm'])&&($_POST['themmoidm'])){
+                    $tenhanghoa=$_POST['tenhanghoa'];
+                    insert_danhmuc($tenhanghoa);
+                    echo '<meta http-equiv="refresh" content="0;url=index.php?act=list_danhmuc">';
+
+                }
+                
+                include "../admin/danhmuc/list_danhmuc.php";
+                break;
+
+            case 'xoadanhmuc':
+                if(isset($_GET['id'])&&($_GET['id']>0)){
                     delete_danhmuc($_GET['id']);
                 }
                 $listdanhmuc=loadall();
-                include "danhmuc/list.php";
+                include "../admin/danhmuc/list_danhmuc.php";
                 break;
 
-            case 'suadm':
-                if(isset($_GET['id'])&& ($_GET['id']>0)){
-                    $dm= loadone($_GET['id']);
-                }
-                include "danhmuc/update.php";
-                break;
-
-            case 'updatedm':
-                if(isset($_POST['capnhat'])&& ($_POST['capnhat'])){
-                    $tendm = $_POST['tendm'];
-                    $id = $_POST['id'];
-                    updatedm($tendm,$id);
-                    $thongbao ="Cập nhật thành công";
+            case 'update_dmuc':
+                if(isset($_POST['capnhat'])&&($_POST['capnhat'])){
+                    $tendm=$_POST['tenhanghoa'];
+                    $id=$_POST['id'];
+                    update_danhmuc($id,$tendm);
+                    echo '<meta http-equiv="refresh" content="0;url=index.php?act=list_danhmuc">';
                 }
                 $listdanhmuc=loadall();
-                include "danhmuc/list.php";
+                include "../admin/danhmuc/list_danhmuc.php";
                 break;
-            case '':
-                
+            case 'suadm':
+                if(isset($_GET['id'])&&($_GET['id']>0)){
+                    $dm=loadone($_GET['id']);
+                }
+                include "../admin/danhmuc/update_dmuc.php";
                 break;
-            
+
+
+
+
+
+
+
             default:
-                include "home.php";
+            include "../admin/home.php";
                 break;
         }
+    }else {
+        include "../admin/home.php";
     }
 
     
-
-?>
-<?php 
-include "./footer.php";
 ?>

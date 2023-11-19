@@ -1,8 +1,8 @@
 <?php 
 
 
-    function insert_danhmuc($tendm){
-        $sql ="insert into danhmuc(tendm) values('$tendm')";
+    function insert_danhmuc($tenhanghoa){
+        $sql ="insert into danhmuc(tendm) values('$tenhanghoa')";
         pdo_execute($sql);
     }
 
@@ -23,7 +23,7 @@
         return $dm;
     }
 
-    function updatedm($tendm,$id){
+    function update_danhmuc($id,$tendm){
         $sql =" update danhmuc set tendm ='".$tendm."' where id=".$id;
         pdo_execute($sql);
     }
